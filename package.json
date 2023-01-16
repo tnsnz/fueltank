@@ -1,16 +1,14 @@
 {
-  "name": "fueltank",
-  "version": "0.0.0",
-  "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "server" : "cd server && nodemon server",
+    "client" : "cd client && npm run start",
+    "start": "concurrently \"npm run server\" \"npm run client\" "
+  },
+
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "ejs": "~2.6.1",
-    "express": "~4.16.1",
-    "http-errors": "~1.6.3",
-    "morgan": "~1.9.1"
+    "concurrently": "^7.6.0"
   }
 }
