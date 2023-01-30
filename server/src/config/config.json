@@ -1,21 +1,21 @@
 {
   "development": {
     "username": "postgres",
-    "password": "hdh1220",
+    "password": "525525",
     "database": "fuel",
     "host": "127.0.0.1",
     "dialect": "postgresql"
   },
   "test": {
     "username": "postgres",
-    "password": "hdh1220",
+    "password": "525525",
     "database": "fuel",
     "host": "127.0.0.1",
     "dialect": "postgresql"
   },
   "production": {
     "username": "postgres",
-    "password": "hdh1220",
+    "password": "525525",
     "database": "fuel",
     "host": "127.0.0.1",
     "dialect": "postgresql"
