@@ -4,10 +4,10 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
+var indexRouter = require('./routes');
 var usersRouter = require('./routes/user');
 
-var models = require("./models/index.js");
+var models = require("./models");
 
 models.sequelize.sync().then(() => {
     console.log("DB 연결 성공");
