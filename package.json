@@ -1,12 +1,13 @@
 {
   "scripts": {
-    "server" : "cd server && nodemon server",
-    "client" : "cd client && npm run start",
+    "server": "cd server && nodemon server",
+    "client": "cd client && npm run start",
     "start": "concurrently \"npm run server\" \"npm run client\" "
   },
-
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^4.6.0"
   },
   "dependencies": {
     "concurrently": "^7.6.0"
