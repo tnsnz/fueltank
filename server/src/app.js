@@ -12,6 +12,7 @@ var models = require("./models");
 models.sequelize.sync().then(() => {
     console.log("DB 연결 성공");
 }).catch(err => {
+    console.log("DB_HOST:", process.env.DB_HOST);
     console.log("DB 연결 실패");
     console.log(err);
 })
