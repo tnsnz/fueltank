@@ -29,6 +29,10 @@ app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// swagger
+const {swaggerUi, specs} = require('./swagger/swagger');
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs, {explorer: true}));
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
