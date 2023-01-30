@@ -3,16 +3,18 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const ejs = require('ejs');
 
 var indexRouter = require('./routes');
-var usersRouter = require('./routes/user');
+var usersRouter = require('./routes/auth');
 
 var models = require("./models");
 
 models.sequelize.sync().then(() => {
     console.log("DB 연결 성공");
+    console.log(__dirname + '/config/config.js');
+
 }).catch(err => {
-    console.log("DB_HOST:", process.env.DB_HOST);
     console.log("DB 연결 실패");
     console.log(err);
 })
@@ -20,8 +22,8 @@ models.sequelize.sync().then(() => {
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+app.set('views', path.join(__dirname, 'tempviews'));
+app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.json());
