@@ -1,0 +1,19 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.container_shadow {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    vertical-align: middle;
+    background-color: white;
+}

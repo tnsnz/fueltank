@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+.home{
+    padding:10px;
+    display: flex;
+}
+.category_container{
+    width:20%;
+    border: 5px solid #92AFC2;
+    height: 900px;
+    border-radius: 15px;
+    padding:15px;
+}
+.board_container{
+    width:80%;
+    border: 5px solid #92AFC2;
+    height: 900px;
+    border-radius: 15px;
+    padding:15px;
+    left:-5px;
+}

@@ -1,0 +1,8 @@
+.category{
+    width:100%;
+    background-color:#000000;
+    padding: 20px;
+    height: 100%;
+    border: 5px solid #92AFC2;
+    border-radius: 15px;
+}
