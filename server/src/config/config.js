@@ -8,7 +8,7 @@ const env = process.env;
     database: env.DB_DATABASE,
     username: env.DB_USER,
     password: env.DB_PASSWD,
-    dialect: 'postgresql',
+    dialect: 'postgres',
   }
 
   const test = {
@@ -17,7 +17,7 @@ const env = process.env;
     database: env.DB_DATABASE,
     username: env.DB_USER,
     password: env.DB_PASSWD,
-    dialect: 'postgresql',
+    dialect: 'postgres',
   }
 
   const production = {
@@ -26,7 +26,7 @@ const env = process.env;
     database: env.DB_DATABASE,
     username: env.DB_USER,
     password: env.DB_PASSWD,
-    dialect: 'postgresql',
+    dialect: 'postgres',
   }
 
 module.exports = { development, production, test };

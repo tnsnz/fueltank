@@ -5,7 +5,8 @@
   <title>Document</title>
 </head>
 <body>
-<h3>안녕</h3>
-
+<% if (session.email) { %> <h1>안녕하세요. <%= session.email %> !</h1> <% } else {%>
+  <h1>안녕하세요</h1>
+<% } %>
 </body>
 </html>

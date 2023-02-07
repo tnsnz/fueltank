@@ -5,7 +5,11 @@ var cors = require("cors");
 router.use(cors());
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    res.render('index', {title: 'Express'});
+    var session = req.session;
+    res.render('index', {
+        title: 'Express',
+        session: session
+    });
 });
 
 const auth = require('./auth');

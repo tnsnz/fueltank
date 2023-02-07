@@ -1,5 +1,6 @@
 var createError = require('http-errors');
 var express = require('express');
+var session = require('express-session');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -20,12 +21,22 @@ models.sequelize.sync().then(() => {
 })
 
 var app = express();
+var env = process.env;
 
 // view engine setup
 app.set('views', path.join(__dirname, 'tempviews'));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
+app.use(session({
+    key: '@fuel',
+    secret: env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: true,
+    cookie: {
+        maxAge: 24000 * 60 * 60 // 쿠키 유효기간 24시간
+    }
+}));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
